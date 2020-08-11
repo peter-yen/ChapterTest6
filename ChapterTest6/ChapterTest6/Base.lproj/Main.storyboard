@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bya-hw-xtb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16097.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main Table View Controller-->
         <scene sceneID="pGS-g9-yX2">
             <objects>
-                <tableViewController id="bya-hw-xtb" customClass="MainTableViewController" customModule="ChapterTest6" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MainTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bya-hw-xtb" customClass="MainTableViewController" customModule="ChapterTest6" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="43o-he-fhK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="checkmark" indentationWidth="10" reuseIdentifier="cell" id="uKf-oD-oaO" customClass="MainTableViewCell" customModule="ChapterTest6" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="uKf-oD-oaO" customClass="MainTableViewCell" customModule="ChapterTest6" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uKf-oD-oaO" id="8sX-O3-iE0">
-                                    <rect key="frame" x="0.0" y="0.0" width="370" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="任務類型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XID-RN-XKG">
-                                            <rect key="frame" x="30" y="11.5" width="69.5" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dqn-vM-MLJ">
+                                            <rect key="frame" x="40" y="4.5" width="364" height="34.5"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zj6-j6-ldX">
+                                            <rect key="frame" x="5" y="7" width="30" height="30"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Zj6-j6-ldX" secondAttribute="height" multiplier="1:1" id="PPo-eK-VC6"/>
+                                            </constraints>
+                                            <connections>
+                                                <action selector="checkedButtonDidTap" destination="uKf-oD-oaO" eventType="touchUpInside" id="Qcs-co-2lV"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="XID-RN-XKG" firstAttribute="centerY" secondItem="8sX-O3-iE0" secondAttribute="centerY" id="CxM-Tl-qhv"/>
-                                        <constraint firstItem="XID-RN-XKG" firstAttribute="leading" secondItem="8sX-O3-iE0" secondAttribute="leadingMargin" constant="10" id="bbf-WI-KC0"/>
+                                        <constraint firstItem="Zj6-j6-ldX" firstAttribute="centerY" secondItem="8sX-O3-iE0" secondAttribute="centerY" id="4bs-EN-x5t"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dqn-vM-MLJ" secondAttribute="trailing" constant="10" id="CxK-zd-Xjf"/>
+                                        <constraint firstItem="Dqn-vM-MLJ" firstAttribute="leading" secondItem="Zj6-j6-ldX" secondAttribute="trailing" constant="5" id="K7I-qZ-vS2"/>
+                                        <constraint firstItem="Dqn-vM-MLJ" firstAttribute="centerY" secondItem="8sX-O3-iE0" secondAttribute="centerY" id="PUz-Mi-8HV"/>
+                                        <constraint firstItem="Zj6-j6-ldX" firstAttribute="leading" secondItem="8sX-O3-iE0" secondAttribute="leading" constant="5" id="Zy7-Pj-QFS"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <constraints>
+                                    <constraint firstItem="Dqn-vM-MLJ" firstAttribute="height" secondItem="uKf-oD-oaO" secondAttribute="height" multiplier="0.8" id="HGR-8o-9i8"/>
+                                    <constraint firstItem="Zj6-j6-ldX" firstAttribute="height" secondItem="uKf-oD-oaO" secondAttribute="height" multiplier="0.689655" id="hpa-Wn-ovZ"/>
+                                </constraints>
                                 <connections>
-                                    <outlet property="titleLabel" destination="XID-RN-XKG" id="HrK-it-PUM"/>
+                                    <outlet property="checkedButton" destination="Zj6-j6-ldX" id="d8d-rf-i5u"/>
+                                    <outlet property="titleTextField" destination="Dqn-vM-MLJ" id="HE7-cL-uQ3"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

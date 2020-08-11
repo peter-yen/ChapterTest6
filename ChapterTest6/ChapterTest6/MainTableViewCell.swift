@@ -10,16 +10,32 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell {
     
+    var title: String = ""
+    var checked: Bool = false
     
-    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var checkedButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        titleLabel.text = "dokfdkokf "
-        
+        titleTextField.text = "test"
+        checkedButton.layer.cornerRadius = checkedButton.frame.width / 2
+        checkedButton.clipsToBounds = true //裁剪邊緣開關
+        checkedButton.layer.borderColor = UIColor.systemGray.cgColor
+        checkedButton.layer.borderWidth = 3
         
     }
-    
+    @IBAction func checkedButtonDidTap() {
+        if checked == true {
+            checkedButton.backgroundColor = .red
+            checked = false
+        }else {
+            checkedButton.backgroundColor = .black
+            checked = true
+        }
+        
+    }
     
 }
