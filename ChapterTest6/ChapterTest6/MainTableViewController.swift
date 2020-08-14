@@ -21,7 +21,7 @@ class MainTableViewController: UITableViewController {
     let barButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonItemDidTap))
     self.navigationItem.rightBarButtonItem = barButtonItem
     
-    
+//    tableView.register(<#T##cellClass: AnyClass?##AnyClass?#>, forCellReuseIdentifier: <#T##String#>)
     getPreviousMissions()
     tableView.keyboardDismissMode = .onDrag
     
@@ -74,9 +74,10 @@ class MainTableViewController: UITableViewController {
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainTableViewCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: "mainTableViewCell", for: indexPath) as! MainTableViewCell
     let mission = missionArray[indexPath.row]
-    
+    cell.mainTableViewController = self
+    cell.row = indexPath.row
     cell.titleTextField.text = mission.title
     cell.titleTextField.delegate = self
     cell.titleTextField.tag = indexPath.row
@@ -89,6 +90,16 @@ class MainTableViewController: UITableViewController {
 
     return cell
   }
+    func checkedButtonDidTap(row: Int, checked: Bool) {
+        missionArray[row].done = checked
+        var missionsDict = [[String: Any]]()
+        for m in missionArray {
+          let missionDict = m.dictionary()
+          missionsDict.append(missionDict)
+        
+    }
+    
+    }
   
   @objc func textFieldEditingChanged(_ textField: UITextField) {
     

@@ -34,11 +34,11 @@ struct Global: Codable {
 
 //print(product.NewConfirmed)
 
-guard let url = URL(string:"https://api.covid19api.com/summary")
-let session = URLSession.shared
-let task = session.dataTask(with: URLRequest(url: url)) { (data, res, error) in
-guard let data = data else { return }
-    let dataString = String(data: data, encoding: .utf8)
-print(dataString)
-}.resume()
+//guard let url = URL(string:"https://api.covid19api.com/summary")
+//let session = URLSession.shared
+//let task = session.dataTask(with: URLRequest(url: url)) { (data, res, error) in
+//guard let data = data else { return }
+//    let dataString = String(data: data, encoding: .utf8)
+//print(dataString)
+//}.resume()
       

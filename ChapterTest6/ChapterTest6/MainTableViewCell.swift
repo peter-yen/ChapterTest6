@@ -12,6 +12,9 @@ class MainTableViewCell: UITableViewCell {
     
     var title: String = ""
     var checked: Bool = false
+    var row: Int = 0
+    var mainTableViewController: MainTableViewController?
+    
     
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -28,6 +31,7 @@ class MainTableViewCell: UITableViewCell {
         
     }
     @IBAction func checkedButtonDidTap() {
+        
         if checked == true {
             checkedButton.backgroundColor = .red
             checked = false
@@ -35,7 +39,7 @@ class MainTableViewCell: UITableViewCell {
             checkedButton.backgroundColor = .black
             checked = true
         }
-        
+        mainTableViewController?.checkedButtonDidTap(row: row, checked: checked)
     }
     
 }

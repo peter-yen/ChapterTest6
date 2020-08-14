@@ -19,6 +19,9 @@
 		8936082E24E1519800ECACEC /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8936082D24E1519800ECACEC /* Date.swift */; };
 		89582D5824D7DBC800DEC435 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89582D5724D7DBC800DEC435 /* MainTableViewCell.swift */; };
 		8989B8A624DBBE230084F984 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989B8A524DBBE230084F984 /* Mission.swift */; };
+		89BC904A24E2463E0048C2C4 /* CovidViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC904924E2463E0048C2C4 /* CovidViewController.swift */; };
+		89BC905224E2E8F40048C2C4 /* TaipeiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC905124E2E8F40048C2C4 /* TaipeiViewController.swift */; };
+		89BC905424E59B650048C2C4 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BC905324E59B650048C2C4 /* PhotoViewController.swift */; };
 		CC8E6E93C85EFA15F0D9566B /* Pods_ChapterTest6.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EEE412FF98C5ED3ACB0C37E /* Pods_ChapterTest6.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +42,9 @@
 		8936082D24E1519800ECACEC /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		89582D5724D7DBC800DEC435 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		8989B8A524DBBE230084F984 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
+		89BC904924E2463E0048C2C4 /* CovidViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CovidViewController.swift; sourceTree = "<group>"; };
+		89BC905124E2E8F40048C2C4 /* TaipeiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiViewController.swift; sourceTree = "<group>"; };
+		89BC905324E59B650048C2C4 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 		BD0E95B092145416C2EEFCB3 /* Pods-ChapterTest6.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChapterTest6.debug.xcconfig"; path = "Target Support Files/Pods-ChapterTest6/Pods-ChapterTest6.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,7 +93,10 @@
 			children = (
 				89196EC124CABD4400BCD80E /* AppDelegate.swift */,
 				89196ED924CACB1300BCD80E /* MainTableViewController.swift */,
+				89BC904924E2463E0048C2C4 /* CovidViewController.swift */,
+				89BC905124E2E8F40048C2C4 /* TaipeiViewController.swift */,
 				8936082724DEC92400ECACEC /* TabBarViewController.swift */,
+				89BC905324E59B650048C2C4 /* PhotoViewController.swift */,
 				89582D5724D7DBC800DEC435 /* MainTableViewCell.swift */,
 				89196EC724CABD4400BCD80E /* Main.storyboard */,
 				89196ECA24CABD4A00BCD80E /* Assets.xcassets */,
@@ -253,12 +262,15 @@
 			files = (
 				8936082C24E1518900ECACEC /* Country.swift in Sources */,
 				89196EDA24CACB1300BCD80E /* MainTableViewController.swift in Sources */,
+				89BC904A24E2463E0048C2C4 /* CovidViewController.swift in Sources */,
 				89196EC224CABD4400BCD80E /* AppDelegate.swift in Sources */,
 				8936082E24E1519800ECACEC /* Date.swift in Sources */,
 				8936082A24E1513900ECACEC /* Global.swift in Sources */,
 				8989B8A624DBBE230084F984 /* Mission.swift in Sources */,
 				8936082824DEC92400ECACEC /* TabBarViewController.swift in Sources */,
+				89BC905224E2E8F40048C2C4 /* TaipeiViewController.swift in Sources */,
 				89582D5824D7DBC800DEC435 /* MainTableViewCell.swift in Sources */,
+				89BC905424E59B650048C2C4 /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
