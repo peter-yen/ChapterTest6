@@ -11,20 +11,13 @@ import SnapKit
 
 class PhotoViewController: UIViewController {
     
-    var photo: UIImageView!
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        photo = UIImageView()
-        view.addSubview(photo)
-        photo.snp.makeConstraints { (make) -> Void in
-            make.width.height.equalTo(50)
-            make.centerY.equalToSuperview()
-            make.centerX.equalToSuperview()
-        }
         
   func fetchImage(from urlString: String, completionHandler: @escaping (_ data: Data?) -> ()) {
       let session = URLSession.shared
@@ -46,7 +39,7 @@ class PhotoViewController: UIViewController {
         fetchImage(from: "http://www.zoo.gov.tw/iTAP/03_Animals/PandaHouse/Panda_Pic02.jpg") { (imageData) in
                 if let data = imageData {
                     DispatchQueue.main.async {
-                        self.photo.image = UIImage(data: data)
+                        
                     }
                 } else {
                         

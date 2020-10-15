@@ -11,7 +11,7 @@ struct Country: Codable {
     var Country: String
     var CountryCode: String
     var Slug: String
-    var NewConfirmed: Int
+    var fgb: Int
     var TotalConfirmed: Int
     var NewDeaths: Int
     var TotalDeaths: Int
